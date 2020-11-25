@@ -43,4 +43,10 @@ plt.hlines(y=expected_value, xmin=test_points[0], xmax=test_points[-1], linestyl
 plt.xlim(test_points[0], test_points[-1])
 plt.ylim(min(min(trapezoidal_integrator_results), min(rectangular_integrator_results)))
 plt.legend()
+plt.xlabel("Integration steps done")
+plt.ylabel("Integration result")
+plt.title(
+    f"Comparison for function = {function_to_integrate},a="
+    f"{left_integration_limes},b={right_integration_limes}")
+plt.savefig("Integrators_comparison.png")
 plt.show()
